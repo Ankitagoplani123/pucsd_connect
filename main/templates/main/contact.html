@@ -1,0 +1,33 @@
+{% load static %}
+<html>
+<head>
+      <title>Eventor</title>
+      <link rel="stylesheet" type="text/css" 
+             href="{% static 'css/contact.css' %}"
+</head>
+<body>  
+      <header>     
+        <div class="main">
+                <div class="logo">
+                    <a href="http://127.0.0.1:8000/">
+                    <img src="{% static '/log.png' %}"></a>
+                </div>
+        </div>
+  <div class="contact">
+    <label class="label" for="fname">Full_Name</label>
+    <input type="text" id="name" name="name" placeholder="Your name..">
+    <label class="label" for="lname">Email</label>
+    <input type="text" id="Email" name="Email" placeholder="Your Email..">
+    <label class="label" for="City">City</label>
+    <select id="country" name="country">
+      <option value="Pune">Pune</option>
+      <option value="Mumbai">Mumbai</option>
+      <option value="Banglore">Banglore</option>
+    </select>
+    <label class="label" for="Query">Query</label>
+    <textarea id="Query" name="subject" placeholder="Write something.." style="height:150px"></textarea>
+    <input type="submit" value="Submit">
+  </div>  
+</header>
+</body>
+</html>

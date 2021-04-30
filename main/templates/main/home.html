@@ -1,0 +1,17 @@
+{% load static %}
+<html>
+<head>
+    <title>PUCSD CONNECT</title>
+</head>
+<body>
+<header>
+    {% include "./base.html" %}
+    {% for message in messages %}
+        <div class="message">
+            <small style="color: white">{{ message }}</small>
+            <a href="" class="del-msg">x</a>
+        </div>
+    {% endfor %}
+</header>
+</body>
+</html>

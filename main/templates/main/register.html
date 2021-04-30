@@ -1,0 +1,35 @@
+{% load static %}
+<html>
+<head>
+    <title>PUCSD CONNECT</title>
+    <link rel="stylesheet" type="text/css"
+          href="{% static 'register.css' %}"
+</head>
+<body>
+<header>
+    {% include "./base.html" %}
+    <div class="head">
+        <h1 class="log2">Sign Up</h1>
+        <p class="fill">Please fill in this form to create an account.</p>
+    </div>
+    <form method="POST">
+        {% csrf_token %}
+        <div class="signup">
+            {% for field in form %}
+                <p>
+                    <small style="color: white">{{ field.label_tag }}</small><br>
+                    {{ field }}
+                    {% if field.help_text %}
+                        <small style="color: grey">{{ field.help_text }}</small>
+                    {% endif %}
+                    {% for error in field.errors %}
+                        <p style="color: red">{{ error }}</p>
+                    {% endfor %}
+                </p>
+            {% endfor %}
+            <input type="submit" value="Sign-up">
+        </div>
+    </form>
+</header>
+</body>
+</html>

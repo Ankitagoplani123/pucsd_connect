@@ -1,0 +1,52 @@
+<html>
+
+{% load crispy_forms_tags %}
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Academic Profile</title>
+</head>
+<body>
+{% include "./base.html" %}
+<div class="col-8">
+<form method="post">
+    {% csrf_token %}
+    <div class="row">
+        <div class="col-3">
+            {{ form.cell|as_crispy_field }}
+        </div>
+        <div class="col-3">
+            {{ form.gender|as_crispy_field }}
+        </div>
+        <div class="col-3">
+            {{ form.role|as_crispy_field }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            {{ form.course_start_year|as_crispy_field }}
+        </div>
+        <div class="col-4">
+            {{ form.course_end_year|as_crispy_field }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            {{ form.highest_degree|as_crispy_field }}
+        </div>
+        <div class="col-4">
+            {{ form.marital_status|as_crispy_field }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-10">
+            {{ form.achievements|as_crispy_field }}
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-success">Save</button>
+</form>
+</div>
+</body>
+</html>

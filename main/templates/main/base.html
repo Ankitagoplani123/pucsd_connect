@@ -1,0 +1,27 @@
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css"
+          href="{% static 'home.css' %}">
+
+</head>
+<body>
+<header>
+    <div class="main">
+        <ul>
+            <li><a href="/">Home</a></li>
+            {% if user.is_authenticated %}
+                <li><a href="/profile/{{ user.username }}">Profile</a></li>
+                <li><a href="/logout">Logout</a></li>
+                {% if user.is_superuser %}
+                    <li><a href="/profile">Allot Role</a></li>
+                {% endif %}
+            {% else %}
+                <li><a href="/login">Login</a></li>
+                <li><a href="/register">Register</a></li>
+            {% endif %}
+        </ul>
+    </div>
+</header>
+</body>
+</html>

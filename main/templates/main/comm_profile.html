@@ -1,0 +1,41 @@
+<html>
+
+{% load crispy_forms_tags %}
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Communication Profile</title>
+</head>
+<body>
+{% include "./base.html" %}
+
+<div class="col-8">
+    <form method="post">
+        {% csrf_token %}
+        <div class="col-4">
+            {{ form.username|as_crispy_field }}
+        </div>
+        <div class="col-4">
+            {{ form.first_name|as_crispy_field }}
+        </div>
+        <div class="col-4">
+            {{ form.last_name|as_crispy_field }}
+        </div>
+        <div class="col-4">
+            {{ form.email|as_crispy_field }}
+        </div>
+        <div class="col-4">
+            {{ form.mobile|as_crispy_field }}
+        </div>
+        <div class="col-4">
+            {{ form.city|as_crispy_field }}
+        </div>
+
+        <button type="submit" class="btn btn-success">Save</button>
+    </form>
+</div>
+
+
+</body>
+</html>

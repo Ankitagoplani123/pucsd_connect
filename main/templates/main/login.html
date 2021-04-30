@@ -1,0 +1,36 @@
+{% load static %}
+<html>
+<head>
+    <title>PUCSD CONNECT</title>
+    <link rel="stylesheet" type="text/css"
+          href="{% static 'login.css' %}"
+</head>
+<body>
+<header>
+    {% include "./base.html" %}
+    <div class="head">
+        <h1>Sign In</h1>
+        <p>Please fill in your details</p>
+    </div>
+    <div class="sign">
+        <form method="POST">
+            {% csrf_token %}
+            {% for field in form %}
+                <p>
+                    <small style="color: white ">{{ field.label_tag }}</small><br>
+                    {{ field }}
+                    {% if field.help_text %}
+                        <small style="color: grey">{{ field.help_text }}</small>
+                    {% endif %}
+                    {% for error in field.errors %}
+                        <p style="color: red">{{ error }}</p>
+                    {% endfor %}
+                </p>
+            {% endfor %}
+            <br><input type="submit" value="Login">
+        </form>
+    </div>
+
+</header>
+</body>
+</html>

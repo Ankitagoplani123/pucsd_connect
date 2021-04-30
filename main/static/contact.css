@@ -1,0 +1,94 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+   background-image: linear-gradient(rgba(0.2,0.7,0,0.6),rgba(0.2,0.7,0,0.6)),url(../image.jpg);
+   background-size: cover;
+   background-position: cover;
+   font-family: sans-serif; 
+}
+
+.main{
+   background: rgba(0.2,0.7,0,0.2);
+   text-align: center;
+}
+.main  ul{
+   display: inline-flex;
+   list-style: none;
+   color: #fff;
+}
+.main ul li{
+   width: 150px;
+   margin: 10px;
+   padding: 9px; 
+}
+.main ul li:hover .sub-main-l ul{
+   display: block;
+   margin: 10px;
+}
+
+.main ul li:hover .sub-main-l ul li{
+   width: 150px;
+   padding: 10px;
+   border-bottom: 1px  dotted #fff;
+   background: transparent;
+   border-radius: 0;
+   text-align: left;
+}     
+.main ul li:hover .sub-main-l ul li:last-child{
+   border-bottom: none;
+}
+
+.main ul li:hover .sub-main-l ul li a:hover{
+   color: yellow;
+}
+.logo img{
+   float: left;
+   margin: 7px;
+   width: 160px;
+   height: 120px;
+   cursor: pointer;
+}
+
+
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; 
+  margin-top: 7px;
+  margin-bottom: 15px;
+  resize: vertical
+}
+
+.label{
+  color: white;
+}
+
+input[type=submit] {
+  background-color: green;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.contact {
+  border-radius: 5px;
+  position: relative;
+  float: left;
+  width: 700px;
+  margin-top: 40px; 
+  margin-bottom: 20px; 
+  padding: 20px;
+} 
