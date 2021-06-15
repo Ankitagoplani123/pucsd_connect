@@ -14,25 +14,26 @@
     <form method="post">
         {% csrf_token %}
         <div class="col-4">
-            {{ form.username|as_crispy_field }}
+            <small style="color: white">{{ form.username|as_crispy_field }}</small>
         </div>
         <div class="col-4">
-            {{ form.first_name|as_crispy_field }}
+            <small style="color: white">{{ form.first_name|as_crispy_field }}</small>
         </div>
         <div class="col-4">
-            {{ form.last_name|as_crispy_field }}
+            <small style="color: white">{{ form.last_name|as_crispy_field }}</small>
         </div>
         <div class="col-4">
-            {{ form.email|as_crispy_field }}
+            <small style="color: white">{{ form.email|as_crispy_field }}</small>
         </div>
         <div class="col-4">
-            {{ form.mobile|as_crispy_field }}
+            <small style="color: white">{{ form.mobile|as_crispy_field }}</small>
         </div>
         <div class="col-4">
-            {{ form.city|as_crispy_field }}
+            <small style="color: white">{{ form.city|as_crispy_field }}</small>
+            <button type="submit" class="btn btn-success">Save</button>
         </div>
 
-        <button type="submit" class="btn btn-success">Save</button>
+
     </form>
 </div>
 

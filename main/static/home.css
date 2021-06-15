@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(./p3.jpg);
+    background-size: cover;
+    background-position: cover;
+    font-family: sans-serif;
+}
+
+.main {
+    background: rgba(0.2, 0.7, 0, 0.2);
+    text-align: center;
+}
+
+.main ul {
+    display: inline-flex;
+    list-style: none;
+    color: #fff;
+}
+
+.main ul li {
+    width: 150px;
+    margin: 10px;
+    padding: 9px;
+}
+
+.main ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 20px;
+    transition: 0.9s ease;
+}
+
+.main ul li a:hover {
+    background-color: white;
+    background: #2bab0d;
+    border-radius: 3px;
+}
+
+.main .fa {
+    margin-right: 8px;
+}
+
+.main ul li.active a {
+    color: red;
+    border-radius: 3px;
+}
+
+.sub-main-l {
+    display: none;
+}
+
+.main ul li:hover .sub-main-l {
+    display: block;
+    position: absolute;
+    background: rgba(0.5, 0.7, 0, 0.2);
+    margin-top: 5px;
+    margin-left: -10px;
+    min-width: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 1.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.main ul li:hover .sub-main-l ul {
+    display: block;
+    margin: 10px;
+}
+
+.main ul li:hover .sub-main-l ul li {
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+
+.main ul li:hover .sub-main-l ul li:last-child {
+    border-bottom: none;
+}
+
+.main ul li:hover .sub-main-l ul li a:hover {
+    color: yellow;
+}
+
+.logo img {
+    float: left;
+    margin: 7px;
+    width: 160px;
+    height: 120px;
+    cursor: pointer;
+}
+
+.title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.title h1 {
+    color: white;
+    font-family: 'Tangerine', serif;
+    font-size: 80px;
+    font: sans-serif;
+}
+
+.button {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn {
+    border: 1px solid #fff;
+    padding: 10px 30px;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.9s ease;
+}
+
+.btn:hover {
+    background-color: #fff;
+    color: #000;
+}
+

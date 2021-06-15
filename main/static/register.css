@@ -1,0 +1,58 @@
+
+.head {
+    width: 600px;
+    height: 80px;
+    float: left;
+    text-align: left;
+    font-size: 13px;
+    color: white;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 7px;
+    margin-bottom: 15px;
+    resize: vertical
+}
+
+.label {
+    color: white;
+    float: left;
+}
+
+input[type=submit] {
+    background-color: green;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    float: left;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.signup {
+    position: relative;
+    width: 100%;
+    left: 170px;
+    box-sizing: border-box;
+    width: 700px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.rem {
+    color: white;
+    position: relative;
+    left: 0px;
+    font-size: 15px;
+}
+

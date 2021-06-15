@@ -9,42 +9,42 @@
 </head>
 <body>
 {% include "./base.html" %}
-<div class="col-8">
+<div class="col-8" >
 <form method="post">
     {% csrf_token %}
+    <small style="color: grey">{{ field.help_text }}</small>
     <div class="row">
         <div class="col-3">
-            {{ form.cell|as_crispy_field }}
+            <small style="color: white">{{ form.cell|as_crispy_field }}</small>
         </div>
         <div class="col-3">
-            {{ form.gender|as_crispy_field }}
+            <small style="color: white">{{ form.gender|as_crispy_field }}</small>
         </div>
         <div class="col-3">
-            {{ form.role|as_crispy_field }}
+            <small style="color: white">{{ form.role|as_crispy_field }}</small>
         </div>
     </div>
     <div class="row">
         <div class="col-4">
-            {{ form.course_start_year|as_crispy_field }}
+            <small style="color: white">{{ form.course_start_year|as_crispy_field }}</small>
         </div>
         <div class="col-4">
-            {{ form.course_end_year|as_crispy_field }}
+            <small style="color: white">{{ form.course_end_year|as_crispy_field }}</small>
         </div>
     </div>
     <div class="row">
         <div class="col-4">
-            {{ form.highest_degree|as_crispy_field }}
+            <small style="color: white">{{ form.highest_degree|as_crispy_field }}</small>
         </div>
         <div class="col-4">
-            {{ form.marital_status|as_crispy_field }}
+            <small style="color: white">{{ form.marital_status|as_crispy_field }}</small>
         </div>
     </div>
     <div class="row">
         <div class="col-10">
-            {{ form.achievements|as_crispy_field }}
+            <small style="color: white">{{ form.achievements|as_crispy_field }}</small>
         </div>
     </div>
-
     <button type="submit" class="btn btn-success">Save</button>
 </form>
 </div>

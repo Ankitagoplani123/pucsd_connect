@@ -3,7 +3,7 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.models import User
 from django.forms import ModelForm
 
-from main.models import *
+from .models import *
 
 
 class SignUpForm(UserCreationForm):
@@ -39,4 +39,16 @@ class AluForm(ModelForm):
 class RegForm(ModelForm):
     class Meta:
         model = Register
+        fields = "__all__"
+
+
+class RoleAllotForm(ModelForm):
+    class Meta:
+        model = SpecialPostForm
+        fields = "__all__"
+
+
+class TempForm(ModelForm):
+    class Meta:
+        model = temp_model
         fields = "__all__"

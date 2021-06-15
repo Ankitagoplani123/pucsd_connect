@@ -1,0 +1,72 @@
+{% load static %}
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Profiles</title>
+</head>
+<body>
+{% include "./base.html" %}
+<h2 class="text-center" style="color: white">PUCSD DATA DIRECTORY</h2><br>
+<form method="post">
+    {% csrf_token %}
+    <div style="padding: 30px">
+        <small style="color: white">{{ form }}</small>
+            <button type="submit">Get Data</button>
+    </div>
+    </div>
+</form>
+<table class="table table-dark table-striped">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Batch</th>
+        <th>Email</th>
+        <th>Cell</th>
+        <th>Gender</th>
+        <th>Contact</th>
+        <th>City</th>
+        <th>Role</th>
+        <th>Highest Degree</th>
+        <th>Marital Status</th>
+        <th>First Company</th>
+        <th>Current Company</th>
+        <th>Experience</th>
+        <th>Post</th>
+        <th>Edit</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- jinja2 Technique -->
+    {% for i in data %}
+    <tr>
+        <td>{{i.first_name}} {{i.last_name}}</td>
+        <td>{{i.profile.course_start_year}}</td>
+        <td>{{i.email}}</td>
+        <td>{{i.profile.cell}}</td>
+        <td>{{i.profile.gender}}</td>
+        <td>{{i.mobile}}</td>
+        <td>{{i.city}}</td>
+        <td>{{i.profile.role}}</td>
+        <td>{{i.profile.highest_degree}}</td>
+        <td>{{i.profile.marital_status}}</td>
+        <td>{{i.profile.alumni_data.first_company}}</td>
+        <td>{{i.profile.alumni_data.current_company}}</td>
+        <td>{{i.profile.alumni_data.experience}}</td>
+        <td>{{i.profile.alumni_data.job_post}}</td>
+        {% if user.is_superuser%}
+        <td><a href="/my_profile/{{i.username}}">Click</a></td>
+        {% elif client.post == 'BM' and client.batch_managing == i.profile.course_start_year %}
+        <td><a href="/my_profile/{{i.username}}">Click</a></td>
+        {% else %}
+        <td><a>Not Allowed</a></td>
+        {% endif %}
+
+
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>

@@ -11,10 +11,11 @@
         <ul>
             <li><a href="/">Home</a></li>
             {% if user.is_authenticated %}
-                <li><a href="/profile/{{ user.username }}">Profile</a></li>
+                <li><a href="/my_profile/{{ user.username }}">My Profile</a></li>
+                <li><a href="/profiles/{{user.username}}">Profiles</a></li>
                 <li><a href="/logout">Logout</a></li>
                 {% if user.is_superuser %}
-                    <li><a href="/profile">Allot Role</a></li>
+                    <li><a href="/allot_role">Allot Role</a></li>
                 {% endif %}
             {% else %}
                 <li><a href="/login">Login</a></li>

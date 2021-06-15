@@ -1,0 +1,23 @@
+{% load static %}
+<html xmlns="http://www.w3.org/1999/html">
+{% load crispy_forms_tags %}
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Allot Role</title>
+</head>
+<body>
+{% include "./base.html" %}
+<div class="col-8">
+    <form method="post">
+        {% csrf_token %}
+        <div class="col-10">
+            <small style="color: white">{{ form|crispy}}</small>
+            <button type="submit" class="btn btn-success">Allot</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

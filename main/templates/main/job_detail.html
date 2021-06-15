@@ -14,19 +14,18 @@
         <form method="post">
             {% csrf_token %}
             <div class="col-4">
-                {{ form.first_company|as_crispy_field }}
+                <small style="color: white">{{ form.first_company|as_crispy_field }}</small>
             </div>
             <div class="col-4">
-                {{ form.current_company|as_crispy_field }}
+                <small style="color: white">{{ form.current_company|as_crispy_field }}</small>
             </div>
             <div class="col-4">
-                {{ form.experience|as_crispy_field }}
+                <small style="color: white">{{ form.experience|as_crispy_field }}</small>
             </div>
             <div class="col-4">
-                {{ form.job_post|as_crispy_field }}
+                <small style="color: white">{{ form.job_post|as_crispy_field }}</small>
+                <button type="submit" class="btn btn-success">Save</button>
             </div>
-
-            <button type="submit" class="btn btn-success">Save</button>
         </form>
     </div>
 </div>
